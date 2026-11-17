@@ -1,0 +1,40 @@
+{
+  "name": "science-quest-year-2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Science Quest \u2013 Year 2: KSSR Science (DLP) learning platform with progress tracking.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/unit/*.test.ts",
+    "test:db": "bash scripts/test-db.sh",
+    "content:sql": "tsx scripts/generate-content-sql.ts && bash scripts/build-setup-sql.sh",
+    "setup:teacher": "tsx --env-file=.env.local scripts/create-teacher.ts",
+    "setup:sample-students": "tsx --env-file=.env.local scripts/create-sample-students.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.57.0",
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "recharts": "^2.15.4",
+    "server-only": "^0.0.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}

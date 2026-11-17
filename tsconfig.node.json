@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": ".build",
+    "rootDir": ".",
+    "types": ["node"]
+  },
+  "include": ["scripts/generate-content-sql.ts", "src/lib/content/**/*.ts", "src/lib/grading.ts", "src/lib/progress.ts", "src/lib/sync/queue.ts", "tests/unit/**/*.ts", "src/lib/sync/queue.ts"]
+}
